@@ -23,15 +23,16 @@ header b {
 
 }
 .asideHome ul {
+    
     padding-left:0;
     margin-right:10px;
 }
-.asideHome li{
-    list-style:none;
-    border: 1px solid red;
-    padding:10px;
-    
-}
+    .asideHome li {
+        margin-bottom: 5px;
+        list-style: none;
+        border: 1px solid red;
+        padding: 10px;
+    }
 
 .asideHome a {
     
@@ -41,6 +42,7 @@ header b {
     background-color:#ccc;
     width:80%;
     float:right;
+    min-height:550px;
 }
 
 .homeImage {
@@ -70,4 +72,40 @@ footer u {
     color:white;
 }
 
+.titleCosmo{
+    padding-left:10px;
+}
 
+.btnGroup{
+    padding:10px;   
+}
+.btnGroup label{
+    padding-right:10px;
+}
+.btnGroup input{
+    padding:5px;
+}
+
+.btnJs {
+    padding: 10px;
+}
+.btnJs input[type=button] {
+    padding: 5px;
+    background-color: #ff5a5a;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:400ms all;
+}
+
+.btnJs input[type=button]:hover {
+    background: #ffa5a5;
+}
+
+.listado{
+    padding-left:10px;
+}
+.titleListado {
+    padding-left: 10px;
+}

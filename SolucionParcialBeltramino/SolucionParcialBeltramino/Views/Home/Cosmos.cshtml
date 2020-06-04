@@ -1,7 +1,87 @@
 ﻿
 @{
-    ViewBag.Title = "Cosmos";
+    ViewBag.Title = "Cosmo";
 }
 
-<h2>Cosmos</h2>
+<h2 class="titleCosmo">Cosmo</h2>
+
+<form id="formulario">
+    <div class="btnGroup">
+        <label>Siglo</label>
+        <input id="inpSiglo" type="text" placeholder="Escriba el siglo"  /> <p class="spanSiglo" style="display:none;">Ingresar el siglo!</p>
+    </div>
+    <div class="btnGroup">
+        <label>Nombre</label>
+        <input id="inpName" type="text" placeholder="Escriba el Nombre"  /><p class="spanNombre"  style="display:none;">Ingresar el nombre!</p>
+    </div>
+    <div class="btnJs">
+        <input type="button" id="btnSave" onclick="guardar();" value="Grabar" />
+        <input type="button" id="btnList" onclick="listar();" value="Listar" />
+
+    </div>
+    <h3 class="titleListado">Listado de Constelaciones</h3>
+    <div id="listado" class="listado">
+
+    </div>
+
+</form>
+
+
+@section scripts{
+    
+<script>
+
+    var constelaciones = [];
+
+    function Constelacion(siglo, nombre) {
+        this.siglo = siglo;
+        this.nombre = nombre;
+        Object.defineProperty(this, 'textoListado', {
+            get: function () {
+                return 'Constelacion ' + this.nombre + ' del siglo :' + this.siglo 
+            },enumerable:true
+        });
+        
+    }
+
+    function guardar() {
+        let inpSiglo = document.getElementById("inpSiglo").value;
+        let inpName = document.getElementById("inpName").value;
+        if (inpSiglo == "") {
+            displa
+        } else {
+
+        let oConstelacion = new Constelacion(inpSiglo, inpName);
+        constelaciones.push(oConstelacion);
+        document.getElementById("inpSiglo").value = "";
+        document.getElementById("inpName").value = "";
+        }
+        
+
+    }
+
+    function listar() {
+        document.getElementById("listado").innerHTML = "";
+        
+
+
+        constelaciones.forEach(function (item) {
+           
+            let constelacion = document.createElement("p");
+            constelacion.innerText = item.textoListado;
+            
+            document.getElementById("listado").appendChild(constelacion);
+             
+        });
+    }
+
+</script>    
+    
+    
+    
+    
+    
+    
+}
+
 
