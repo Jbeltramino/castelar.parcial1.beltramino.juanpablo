@@ -1,24 +1,73 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.clearfix{
+    float:none;
+    clear:both;
+}
+.container{
+    width:960px;
+    margin:0 auto;
+}
+header {
+    display:block;
+    background-color: #286af0;
+}
+header p {
+    padding: 15px 0;
+    margin: 0;
+}
+header b {
+    font-size: 25px;
+}
+.asideHome{
+    float:left; 
+    width:20%;
+
+}
+.asideHome ul {
+    padding-left:0;
+    margin-right:10px;
+}
+.asideHome li{
+    list-style:none;
+    border: 1px solid red;
+    padding:10px;
+    
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.asideHome a {
+    
+    text-decoration: none;
+}
+.sectionHome{
+    background-color:#ccc;
+    width:80%;
+    float:right;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+.homeImage {
+    margin-top: 40px;
+}
+.homeImage img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 280px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.homeImage p {
+    text-align:center;
+    margin-top:5px;
 }
+footer {
+    background-color: #286af0;
+    text-align:center;
+}
+footer p{
+    padding-top:5px;
+    margin:0;
+    height:40px;
+}
+footer u {
+    color:white;
+}
+
+
