@@ -5,14 +5,14 @@
 
 <h2 class="titleCosmo">Cosmo</h2>
 
-<form id="formulario">
+<form id="formulario" >
     <div class="btnGroup">
         <label>Siglo</label>
-        <input id="inpSiglo" type="text" placeholder="Escriba el siglo"  /> <p class="spanSiglo" style="display:none;">Ingresar el siglo!</p>
+        <input id="inpSiglo" type="text" placeholder="Escriba el siglo"  /> <p id="spanSiglo" style="display:none;">Ingresar el siglo!</p>
     </div>
     <div class="btnGroup">
         <label>Nombre</label>
-        <input id="inpName" type="text" placeholder="Escriba el Nombre"  /><p class="spanNombre"  style="display:none;">Ingresar el nombre!</p>
+        <input id="inpName" type="text" placeholder="Escriba el Nombre"  /><p id="spanNombre"  style="display:none;">Ingresar el nombre!</p>
     </div>
     <div class="btnJs">
         <input type="button" id="btnSave" onclick="guardar();" value="Grabar" />
@@ -45,16 +45,26 @@
     }
 
     function guardar() {
+        document.getElementById("spanSiglo").style.display = "none";
+        document.getElementById("spanNombre").style.display = "none";
+
         let inpSiglo = document.getElementById("inpSiglo").value;
         let inpName = document.getElementById("inpName").value;
         if (inpSiglo == "") {
-            displa
+            document.getElementById("spanSiglo").style.display = "block";
+            if (inpName == "") {
+                document.getElementById("spanNombre").style.display = "block";
+            }
         } else {
-
-        let oConstelacion = new Constelacion(inpSiglo, inpName);
+            if (inpName == "") {
+                document.getElementById("spanNombre").style.display = "block";
+            } else {
+                 let oConstelacion = new Constelacion(inpSiglo, inpName);
         constelaciones.push(oConstelacion);
         document.getElementById("inpSiglo").value = "";
         document.getElementById("inpName").value = "";
+            }
+       
         }
         
 

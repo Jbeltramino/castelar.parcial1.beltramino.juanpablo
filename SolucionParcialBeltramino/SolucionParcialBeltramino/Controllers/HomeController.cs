@@ -13,7 +13,7 @@ namespace SolucionParcialBeltramino.Controllers
             return View();
         }
 
-        public ActionResult Cosmo()
+       public ActionResult Cosmo()
         {
             return View();
         }

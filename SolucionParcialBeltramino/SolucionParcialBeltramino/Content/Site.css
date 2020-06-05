@@ -89,7 +89,7 @@ footer u {
 .btnJs {
     padding: 10px;
 }
-.btnJs input[type=button] {
+.btnJs input {
     padding: 5px;
     background-color: #ff5a5a;
     text-decoration: none;
@@ -99,7 +99,7 @@ footer u {
     transition:400ms all;
 }
 
-.btnJs input[type=button]:hover {
+.btnJs input:hover {
     background: #ffa5a5;
 }
 
